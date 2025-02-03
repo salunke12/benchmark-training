@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
     <style>
+      /* Prevents focus outline effect on read-only input */
       .form-control:read-only:focus {
         box-shadow: none;
       }
@@ -21,6 +25,7 @@
     <div class="container mt-5 w-50">
       <h1 class="text-center">Todo App</h1>
 
+      <!-- Input field and add button -->
       <div class="input-group mb-3">
         <input
           type="text"
@@ -37,13 +42,18 @@
         </button>
       </div>
 
+      <!-- List container for todo items -->
       <ul class="list-group" id="ul-todo"></ul>
+
+      <!-- Button to clear all todos -->
       <div class="text-center mt-3">
         <button class="btn btn-outline-secondary" id="delete-all">
           Clear All
         </button>
       </div>
     </div>
-    <script src="script.js" />
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
   </body>
 </html>
