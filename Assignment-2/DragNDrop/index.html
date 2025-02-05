@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Drag & Drop</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #e0f7fa;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+      }
+
+      .box {
+        width: 45%;
+        height: 300px;
+        border: 2px dashed #00796b;
+        padding: 10px;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: auto;
+      }
+
+      .box h2 {
+        text-align: center;
+        margin-bottom: 15px;
+        color: #004d40;
+      }
+
+      .item {
+        padding: 10px;
+        margin: 5px;
+        background-color: #80cbc4;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 80%;
+        text-align: center;
+        box-sizing: border-box;
+        color: #004d40;
+      }
+
+      .item:active {
+        opacity: 0.7;
+      }
+
+      .item.dragging {
+        opacity: 0.5;
+      }
+
+      .box.hover {
+        background-color: #b2dfdb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="section1">
+        <h2>Box 1</h2>
+        <div class="item" draggable="true" id="itemA">Item A</div>
+        <div class="item" draggable="true" id="itemB">Item B</div>
+        <div class="item" draggable="true" id="itemC">Item C</div>
+      </div>
+      <div class="box" id="section2">
+        <h2>Box 2</h2>
+      </div>
+    </div>
+    <script>
+      const sections = document.querySelectorAll(".box");
+      const items = document.querySelectorAll(".item");
+
+      items.forEach((item) => {
+        item.addEventListener("dragstart", (e) => {
+          e.dataTransfer.setData("text", item.id);
+          item.classList.add("dragging");
+        });
+
+        item.addEventListener("dragend", () => {
+          item.classList.remove("dragging");
+        });
+      });
+
+      sections.forEach((section) => {
+        section.addEventListener("dragover", (e) => {
+          e.preventDefault();
+          section.classList.add("hover");
+        });
+
+        section.addEventListener("dragleave", () => {
+          section.classList.remove("hover");
+        });
+
+        section.addEventListener("drop", (e) => {
+          e.preventDefault();
+          section.classList.remove("hover");
+          const itemId = e.dataTransfer.getData("text");
+          const draggedItem = document.getElementById(itemId);
+          section.appendChild(draggedItem);
+        });
+      });
+    </script>
+  </body>
+</html>
