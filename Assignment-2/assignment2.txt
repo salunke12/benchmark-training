@@ -1,0 +1,19 @@
+HTML Assignment
+
+(52:05)
+
+Create a draggable list in HTML with multiple items.
+
+🖼️
+Image Slider Creation
+
+(53:05)
+
+Create an infinite image slider without third-party libraries.
+
+🔄
+Dynamic Slider Functionality
+
+(54:05)
+
+Slider should loop back to first image after last.
