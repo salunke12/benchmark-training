@@ -70,6 +70,12 @@ const sedan = new Car("Toyota", "Essilion", 250, 4, "Moon Silver");
 const motorcycle = new Bike("Suzuki", "Crescent", 130, "sports");
 const freightTruck = new Truck("Mercedes", "750TWS", 670, true);
 
-console.log(sedan.calculateRentalFee(43));
-console.log(motorcycle.calculateRentalFee(23));
-console.log(freightTruck.calculateRentalFee(67));
+console.log(sedan.calculateRentalFee(43)); // Calculate rental fee for the car
+console.log(motorcycle.calculateRentalFee(23)); // Calculate rental fee for the bike
+console.log(freightTruck.calculateRentalFee(67)); // Calculate rental fee for the truck
+
+/* Output:
+Car Rental Fee: 43000
+Bike Rental Fee: 3300
+Truck Rental Fee: 45390
+*/
