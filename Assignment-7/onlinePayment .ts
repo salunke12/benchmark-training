@@ -59,3 +59,12 @@ const cryptoPayment = new CryptoPayment(
 creditCardPayment.processPayment();
 paypalPayment.processPayment();
 cryptoPayment.processPayment();
+
+/* Output:
+Credit Card Payment: $150.75 on Tue Feb 12 2025 00:00:00 GMT+0000 (Coordinated Universal Time)
+Card Holder: John Doe
+PayPal Payment: $99.99 on Tue Feb 12 2025 00:00:00 GMT+0000 (Coordinated Universal Time)
+User ID: user123
+Crypto Payment: $0.25 on Tue Feb 12 2025 00:00:00 GMT+0000 (Coordinated Universal Time)
+Wallet Address: 1A2B3C4D5E6F7G8H9I
+*/
