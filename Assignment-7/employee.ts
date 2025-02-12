@@ -86,3 +86,10 @@ console.log(
   `${intern.empName} (Mentor: ${intern.mentor.empName}) Bonus: `,
   intern.computeBonus()
 );
+
+/* Output:
+John Doe Bonus: 100
+Johnathan Williams (Dept: HR) Bonus: 140000
+Hoshiyumi Nagumo (Project: Surgical Robot) Bonus: 112500
+Ulysses Yggrite (Mentor: Hoshiyumi Nagumo) Bonus: 4000
+*/
