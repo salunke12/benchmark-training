@@ -1,0 +1,11 @@
+1. npm init
+
+2. npm i -g typescript
+
+3. tsc --version
+
+4. tsc --init --sourceMap --rootDir src --outDir dist
+
+5. create a src directory
+
+6. tsc
