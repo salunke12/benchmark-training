@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoBuy</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">GoBuy</div>
+        <ul class="nav-links">
+          <li><a>Home</a></li>
+          <li><a>Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="admin.html">Profile</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="wrapper">
+        <div class="prev-btn"><i class="fas fa-chevron-left"></i></div>
+
+        <div class="slides-container">
+          <div class="slide-image">
+            <img src="Images/image6.jpg" alt="" />
+          </div>
+
+          <div class="slide-image">
+            <img src="Images/image5.jpg" alt="" />
+          </div>
+
+          <div class="slide-image">
+            <img src="Images/image3.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="next-btn"><i class="fas fa-chevron-right"></i></div>
+      </div>
+
+      <div class="navigation-dots"></div>
+      <section class="products-section">
+        <h2 id="category-title">Suggestions for you</h2>
+        <div class="products-grid" id="products-container">
+          <!-- Products will be dynamically inserted here -->
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 ShopNest. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
